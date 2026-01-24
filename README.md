@@ -8,16 +8,19 @@ This repository contains code to reproduce the results in the supplementary file
 The reproducibility folder is organized as follows.  
 
 - **`OT-visualization.ipynb`**  
-  Contains all code used to generate the visualization plots in Figures 1–4 of the supplementary file, illustrating optimal transport–based signs and ranks under multivariate symmetry.
+  Contains code used to generate the visualization plots in Figures 1–4 of the supplementary file, illustrating optimal transport–based signs and ranks under multivariate symmetry.
 
 - **`OTsymm_simulations.ipynb`**  
   Contains simulation code for Appendix D.1 and Appendix D.2. This notebook implements the OT-Wilcox and OT-sign testing procedures using both random and Halton-transformed reference vectors, produces results for the simulated examples (C1–C10, S1–S10, Sp1–Sp10), and includes a section to generate the raw outputs (`Gaussian.csv` and `Epanechnikov.csv`) used for Figure 5.
 
 - **`SymOT.R`**  
-  Reads `Gaussian.csv` and `Epanechnikov.csv` and generates Figure 5 in the supplementary file.
+  Reads `Gaussian.csv` and `Epanechnikov.csv` from the outputs of `OTsymm_simulations.ipynb` and generates Figure 5 in the supplementary file.
 
 - **`OT_symm_real_data.ipynb`**  
   Reproduces all real-data analyses reported in Appendix D.3.
+
+- **`otherMethods.R` and `other_methods.ipynb`**  
+  Reproduce results for competing methods in Appendix D.2 (Tables 2-4). 
 
 - **`Gaussian.csv` and `Epanechnikov.csv`**  
   Store precomputed simulation results for Figure 5 to avoid long computation times.
@@ -45,8 +48,9 @@ The reproducibility folder is organized as follows.
 
     Note: Copies of the data sets used are included in this repository (NASA prognostics data `metadata.csv` and healthcare data `aids_clinical_trials_X.csv` and `aids_clinical_trials_y.csv`).
 
-4. To implement our methods (OT-Wilcox and OT-sign) with random and Halton transformed reference vectors for simulated examples (C1-C10, S1-S10, Sp1-Sp10) in Appendix D.2, run the section "Code to implement OT-Wilcox, OT-sign for simulated examples in Appendix D.2" in the Jupyter notebook `OTsymm_simulations.ipynb`. 
+4. To implement our methods (OT-Wilcox and OT-sign) with random and Halton transformed reference vectors for simulated examples (C1-C10, S1-S10, Sp1-Sp10) in Tables 2-4 of Appendix D.2, run the section "Code to implement OT-Wilcox, OT-sign for simulated examples in Appendix D.2" in the Jupyter notebook `OTsymm_simulations.ipynb`. This section also produces results for the method T2 (in Tables 2-4).
 
     Note: Running all these simulations could take a long time. The results have already been printed in the notebook.
 
+5. To implement other methods mentioned in Appendix D.2 and reproduce the corresponding results shown in Tables 2-4, run `otherMethods.R` for methods DLP (Table 2), SSR (Table 3) and SS (Table 3), and run `other_methods.ipynb` for methods EG (Table 2), LB (Table 4) and HHM (Table 4).
 
