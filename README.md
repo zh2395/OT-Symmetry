@@ -1,4 +1,4 @@
-# Reproducibility supplement for "Distribution-Free Signs and Ranks via Optimal Transport under Multivariate Symmetry: Application to One-Sample Location Testing"
+# Reproducibility supplement for "Distribution-Free Signs and Ranks via Optimal Transport under Multivariate Symmetry and Application to One-Sample Location Testing"
 
 This repository contains code to reproduce the results in the supplementary file of the paper "Distribution-Free Signs and Ranks via Optimal Transport under Multivariate Symmetry: Application to One-Sample Location Testing".
 
